@@ -10,6 +10,8 @@ import com.nhnacademy.springjpa.entity.user.User;
 import com.nhnacademy.springjpa.repository.PostRepository;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import org.junit.jupiter.api.Test;
@@ -63,7 +65,6 @@ public class PostEntityTest {
         Comment comment = new Comment();
         comment.setContent("comment");
         comment.setCreatedAt(LocalDateTime.now());
-        comment.setCommentNo(1L);
         comment.setUser(user);
 
         post1.addComment(comment);
@@ -71,6 +72,7 @@ public class PostEntityTest {
         postRepository.save(post1);
 
         assertThat(post1.getUser().getUserNo()).isEqualTo(user.getUserNo());
+
         postRepository.flush();
 
 

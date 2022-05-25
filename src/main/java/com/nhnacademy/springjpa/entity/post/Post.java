@@ -29,6 +29,20 @@ import lombok.Setter;
 @Entity
 @Table(name="Post")
 public class Post {
+
+    public Post(Long postNo, String title, String content, LocalDateTime createdAt,
+                Integer postDepth, Long postGroupNo, Long postGroupSeq,
+                User user) {
+        this.postNo = postNo;
+        this.title = title;
+        this.content = content;
+        this.createdAt = createdAt;
+        this.postDepth = postDepth;
+        this.postGroupNo = postGroupNo;
+        this.postGroupSeq = postGroupSeq;
+        this.user = user;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "post_no")
@@ -63,12 +77,12 @@ public class Post {
     @JoinColumn(name = "user_no")
     private User user;
 
-    @OneToMany(mappedBy = "post")
-    private List<Comment> commentList = new ArrayList<>();
+    @OneToMany(mappedBy = "post", cascade = CascadeType.PERSIST)
+    private List<Comment> comments = new ArrayList<>();
 
     public void addComment(Comment comment){
         comment.setPost(this);
-        commentList.add(comment);
+        comments.add(comment);
     }
 
 }
