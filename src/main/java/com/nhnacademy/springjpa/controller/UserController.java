@@ -29,7 +29,7 @@ public class UserController {
         boolean isLoginSuccess = userService.doLogin(userName, password, request);
 
         if (isLoginSuccess) {
-            response.sendRedirect("/posts");
+            response.sendRedirect("/posts/index?page=0&size=20");
             return null;
         }
 

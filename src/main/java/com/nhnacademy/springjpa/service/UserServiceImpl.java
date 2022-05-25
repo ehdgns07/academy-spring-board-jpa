@@ -18,7 +18,7 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
 
     public boolean doLogin(String username, String password, HttpServletRequest request) {
-        UserDto user = userRepository.findByUserName(username);
+        UserDto user = userRepository.findByUsername(username);
 
         if (Objects.isNull(user)) {
             return false;

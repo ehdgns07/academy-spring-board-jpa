@@ -24,15 +24,15 @@ import org.springframework.transaction.annotation.Transactional;
     @ContextConfiguration(classes = WebConfig.class)
 })
 public class CommentEntityTest {
-    @PersistenceContext
-    private EntityManager entityManager;
-
-    @Test
-    public void commentTest(){
-        Comment comment = entityManager.find(Comment.class, 1L);
-
-        assertThat(comment.getContent()).isEqualTo("cccccccccccc");
-
-
-    }
+    // @PersistenceContext
+    // private EntityManager entityManager;
+    //
+    // @Test
+    // public void commentTest(){
+    //     Comment comment = entityManager.find(Comment.class, 1L);
+    //
+    //     assertThat(comment.getContent()).isEqualTo("cccccccccccc");
+    //
+    //
+    // }
 }

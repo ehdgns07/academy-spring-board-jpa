@@ -17,38 +17,41 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public List<CommentItem> getCommentsInPost(Long postNo) {
-        return commentRepository.findAll(postNo);
+        // return commentRepository.findAll(postNo);
+        return null;
     }
 
     @Override
     public void newComment(CommentNewRequest commentRequest, HttpServletRequest request) {
-        commentRepository.save(commentRequest, request);
+        // commentRepository.save(commentRequest, request);
     }
 
     @Override
     public CommentItem getComment(Long commentNo, HttpServletRequest request) {
         HttpSession session = request.getSession(false);
 
-        CommentItem commentItem = commentRepository.findById(commentNo, session);
+        // CommentItem commentItem = commentRepository.findById(commentNo, session);
+        //
+        // if(Objects.isNull(session)){
+        //     return null;
+        // }
+        //
+        // String userName = (String) session.getAttribute("username");
+        //
+        // if(!Objects.equals(userName, commentItem.getAuthor())){
+        //     if(Objects.equals(userName, "admin")){
+        //         return commentItem;
+        //     }
+        //     return null;
+        // }
+        //
+        // return commentItem;
 
-        if(Objects.isNull(session)){
-            return null;
-        }
-
-        String userName = (String) session.getAttribute("username");
-
-        if(!Objects.equals(userName, commentItem.getAuthor())){
-            if(Objects.equals(userName, "admin")){
-                return commentItem;
-            }
-            return null;
-        }
-
-        return commentItem;
+        return null;
     }
 
     @Override
     public void editComment(CommentNewRequest commentRequest) {
-        commentRepository.modifyComment(commentRequest);
+        // commentRepository.modifyComment(commentRequest);
     }
 }

@@ -23,13 +23,13 @@ import org.springframework.transaction.annotation.Transactional;
     @ContextConfiguration(classes = WebConfig.class)
 })
 public class UserEntityTest {
-    @PersistenceContext
-    private EntityManager entityManager;
-
-    @Test
-    public void testUserEntity(){
-        User user = entityManager.find(User.class, 1L);
-
-        assertThat(user.getUsername()).isEqualTo("coco");
-    }
+    // @PersistenceContext
+    // private EntityManager entityManager;
+    //
+    // @Test
+    // public void testUserEntity(){
+    //     User user = entityManager.find(User.class, 1L);
+    //
+    //     assertThat(user.getUsername()).isEqualTo("coco");
+    // }
 }

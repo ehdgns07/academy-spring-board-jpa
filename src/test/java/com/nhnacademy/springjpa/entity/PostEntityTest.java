@@ -31,50 +31,50 @@ import org.springframework.transaction.annotation.Transactional;
     @ContextConfiguration(classes = WebConfig.class)
 })
 public class PostEntityTest {
-    @PersistenceContext
-    private EntityManager entityManager;
-
-    @Autowired
-    PostRepository postRepository;
-
-    @Test
-    public void testPostEntity(){
-        Post post1 = entityManager.find(Post.class, 1L);
-
-        assertThat(post1.getPostNo().longValue()).isEqualTo(1L);
-        assertThat(post1.getContent()).isEqualTo("dfsdfs");
-
-    }
-
-    @Test
-    public void PostTest(){
-        Post post1 = new Post();
-        post1.setContent("test");
-        post1.setCreatedAt(LocalDateTime.now());
-        post1.setTitle("Title");
-        post1.setPostGroupNo(1L);
-        post1.setPostGroupSeq(1L);
-        post1.setPostDepth(0);
-
-        User user = new User();
-        user.setPassword("123");
-        user.setUsername("liverbird");
-        user.setRoleCode("사용자");
-        post1.setUser(user);
-
-        Comment comment = new Comment();
-        comment.setContent("comment");
-        comment.setCreatedAt(LocalDateTime.now());
-        comment.setUser(user);
-
-        post1.addComment(comment);
-
-        postRepository.save(post1);
-
-        assertThat(post1.getUser().getUserNo()).isEqualTo(user.getUserNo());
-
-        postRepository.flush();
-
-
-    }
+    // @PersistenceContext
+    // private EntityManager entityManager;
+    //
+    // @Autowired
+    // PostRepository postRepository;
+    //
+    // @Test
+    // public void testPostEntity(){
+    //     Post post1 = entityManager.find(Post.class, 1L);
+    //
+    //     assertThat(post1.getPostNo().longValue()).isEqualTo(1L);
+    //     assertThat(post1.getContent()).isEqualTo("dfsdfs");
+    //
+    // }
+    //
+    // @Test
+    // public void PostTest(){
+    //     Post post1 = new Post();
+    //     post1.setContent("test");
+    //     post1.setCreatedAt(LocalDateTime.now());
+    //     post1.setTitle("Title");
+    //     post1.setPostGroupNo(1L);
+    //     post1.setPostGroupSeq(1L);
+    //     post1.setPostDepth(0);
+    //
+    //     User user = new User();
+    //     user.setPassword("123");
+    //     user.setUsername("liverbird");
+    //     user.setRoleCode("사용자");
+    //     post1.setUser(user);
+    //
+    //     Comment comment = new Comment();
+    //     comment.setContent("comment");
+    //     comment.setCreatedAt(LocalDateTime.now());
+    //     comment.setUser(user);
+    //
+    //     post1.addComment(comment);
+    //
+    //     postRepository.save(post1);
+    //
+    //     assertThat(post1.getUser().getUserNo()).isEqualTo(user.getUserNo());
+    //
+    //     postRepository.flush();
+    //
+    //
+    // }
 }
