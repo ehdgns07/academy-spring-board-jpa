@@ -1,13 +1,17 @@
 package com.nhnacademy.springjpa.service;
 
+import com.nhnacademy.springjpa.domain.post.PostItem;
+import com.nhnacademy.springjpa.domain.post.PostItemDto;
 import com.nhnacademy.springjpa.domain.post.PostNewRequest;
 import com.nhnacademy.springjpa.domain.user.UserDto;
 import com.nhnacademy.springjpa.entity.post.Post;
 import com.nhnacademy.springjpa.repository.PostRepository;
 import com.nhnacademy.springjpa.repository.UserRepository;
+import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
@@ -18,8 +22,9 @@ public class PostServiceImpl implements PostService {
     private final UserRepository userRepository;
 
     @Override
-    public Page<Post> getPagingPosts(Pageable pageable) {
-        return postRepository.getAllBy(pageable);
+    public PageImpl<PostItemDto> getPagingPosts(Pageable pageable) {
+
+        return postRepository.getPosts(pageable);
     }
 
     @Override

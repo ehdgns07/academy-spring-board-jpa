@@ -24,6 +24,7 @@ C:\Users\ehdgn\javaEx\academy-spring-board-jpa\src\main\java\com\nhnacademy\spri
 C:\Users\ehdgn\javaEx\academy-spring-board-jpa\src\main\java\com\nhnacademy\springjpa\domain\comment\CommentItem.java
 C:\Users\ehdgn\javaEx\academy-spring-board-jpa\src\main\java\com\nhnacademy\springjpa\service\CommentService.java
 C:\Users\ehdgn\javaEx\academy-spring-board-jpa\src\main\java\com\nhnacademy\springjpa\repository\PostRepositoryCustom.java
+C:\Users\ehdgn\javaEx\academy-spring-board-jpa\target\generated-sources\annotations\com\nhnacademy\springjpa\domain\post\QPostItemDto.java
 C:\Users\ehdgn\javaEx\academy-spring-board-jpa\src\main\java\com\nhnacademy\springjpa\repository\PostRepositoryImpl.java
 C:\Users\ehdgn\javaEx\academy-spring-board-jpa\src\main\java\com\nhnacademy\springjpa\repository\RepositoryBase.java
 C:\Users\ehdgn\javaEx\academy-spring-board-jpa\src\main\java\com\nhnacademy\springjpa\entity\user\User.java
@@ -33,6 +34,7 @@ C:\Users\ehdgn\javaEx\academy-spring-board-jpa\src\main\java\com\nhnacademy\spri
 C:\Users\ehdgn\javaEx\academy-spring-board-jpa\src\main\java\com\nhnacademy\springjpa\domain\user\UserDto.java
 C:\Users\ehdgn\javaEx\academy-spring-board-jpa\src\main\java\com\nhnacademy\springjpa\domain\post\PostDetailViewVo.java
 C:\Users\ehdgn\javaEx\academy-spring-board-jpa\src\main\java\com\nhnacademy\springjpa\config\JpaConfig.java
+C:\Users\ehdgn\javaEx\academy-spring-board-jpa\src\main\java\com\nhnacademy\springjpa\domain\post\PostItemDto.java
 C:\Users\ehdgn\javaEx\academy-spring-board-jpa\target\generated-sources\annotations\com\nhnacademy\springjpa\entity\comment\QComment.java
 C:\Users\ehdgn\javaEx\academy-spring-board-jpa\src\main\java\com\nhnacademy\springjpa\repository\CommentRepository.java
 C:\Users\ehdgn\javaEx\academy-spring-board-jpa\src\main\java\com\nhnacademy\springjpa\service\UserServiceImpl.java

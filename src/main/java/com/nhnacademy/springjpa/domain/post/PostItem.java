@@ -1,5 +1,6 @@
 package com.nhnacademy.springjpa.domain.post;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,6 +17,6 @@ public class PostItem {
     private String username;
     private String author;
     private String modifier;
-    private Date createdAt;
+    private LocalDateTime createdAt;
     // private Integer replyCount;
 }

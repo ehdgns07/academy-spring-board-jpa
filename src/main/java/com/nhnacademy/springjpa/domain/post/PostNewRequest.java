@@ -1,5 +1,6 @@
 package com.nhnacademy.springjpa.domain.post;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,7 +18,7 @@ public class PostNewRequest {
     private Long parentPostNo;
     private String title;
     private String content;
-    private Date createdAt;
+    private LocalDateTime createdAt;
     private Integer postDepth;
     private Long postGroupNo;
     private Long postGroupSeq;

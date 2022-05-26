@@ -18,6 +18,7 @@ com\nhnacademy\springjpa\exception\UserRegisterFailedException.class
 com\nhnacademy\springjpa\entity\favorite\QFavorite.class
 com\nhnacademy\springjpa\repository\PostRepositoryCustom.class
 com\nhnacademy\springjpa\repository\UserRepository.class
+com\nhnacademy\springjpa\domain\post\QPostItemDto.class
 com\nhnacademy\springjpa\repository\PostRepositoryImpl.class
 com\nhnacademy\springjpa\entity\comment\QComment.class
 com\nhnacademy\springjpa\controller\ControllerBase.class
@@ -39,3 +40,4 @@ com\nhnacademy\springjpa\entity\post\Post.class
 com\nhnacademy\springjpa\domain\comment\CommentItem.class
 com\nhnacademy\springjpa\controller\PostController.class
 com\nhnacademy\springjpa\domain\post\PostItem.class
+com\nhnacademy\springjpa\domain\post\PostItemDto.class

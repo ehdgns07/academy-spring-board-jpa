@@ -1,5 +1,6 @@
 package com.nhnacademy.springjpa.domain.comment;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,5 +15,5 @@ public class CommentNewRequest {
     private Long userNo;
     private Long postNo;
     private String content;
-    private Date createdAt;
+    private LocalDateTime createdAt;
 }

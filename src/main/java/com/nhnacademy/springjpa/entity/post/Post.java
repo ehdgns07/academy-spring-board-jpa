@@ -2,6 +2,7 @@ package com.nhnacademy.springjpa.entity.post;
 
 import com.nhnacademy.springjpa.entity.comment.Comment;
 import com.nhnacademy.springjpa.entity.user.User;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
@@ -9,6 +10,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -25,7 +27,6 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name="Post")
 public class Post {
@@ -59,10 +60,10 @@ public class Post {
     private LocalDateTime createdAt;
 
     @Column(name = "updated_at")
-    private Date updatedAt;
+    private LocalDateTime updatedAt;
 
     @Column(name = "deleted_at")
-    private Date deletedAt;
+    private LocalDateTime deletedAt;
 
     @Column(name = "post_depth")
     private Integer postDepth;
@@ -77,7 +78,7 @@ public class Post {
     @JoinColumn(name = "user_no")
     private User user;
 
-    @OneToMany(mappedBy = "post", cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "post", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     private List<Comment> comments = new ArrayList<>();
 
     public void addComment(Comment comment){
